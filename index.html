@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ring of Three - Mind Heart Stabilizer - NEXTXUS HUMANCODEX - Forever Free</title>
+<style>
+:root{--bg:#09090b;--card:#131316;--line:#1f1f23;--text:#f5f5f5;--muted:#9f9fa9;--mind:#8b90ff;--heart:#ff7a89;--body:#5ee9a8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+header{max-width:900px;margin:0 auto;padding:50px 20px 20px;text-align:center}
+h1{font-size:40px;line-height:1;margin:0}h1 i{font-weight:300;color:var(--muted);font-style:serif}
+p.sub{color:var(--muted);max-width:600px;margin:14px auto;line-height:1.6}
+.shell{max-width:900px;margin:0 auto;padding:20px}
+.box{background:linear-gradient(180deg,#18181b,#121214);border:1px solid var(--line);border-radius:24px;padding:20px}
+textarea{width:100%;min-height:120px;background:#0c0c0e;border:1px solid var(--line);border-radius:16px;color:#fff;padding:14px;font-size:16px}
+.row{display:flex;gap:10px;margin-top:14px}
+button{border:0;border-radius:999px;padding:12px 22px;font-weight:700;cursor:pointer}
+#go{background:#fff;color:#000}#clr{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.theatre{display:none;margin-top:16px;background:#0f0f11;border:1px solid var(--line);border-radius:20px;padding:16px}
+.theatre.on{display:block}
+.gifts{display:flex;gap:8px;overflow:hidden}
+.gift{width:80px;height:80px;border-radius:12px;background:#222;overflow:hidden;flex-shrink:0;border:1px solid var(--line)}
+.gift img{width:100%;height:100%;object-fit:cover}
+.bar{height:3px;background:var(--line);border-radius:999px;margin-top:12px;overflow:hidden}
+#prog{height:100%;width:0%;background:linear-gradient(90deg,var(--mind),var(--heart),var(--body));transition:width .2s}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;white-space:pre-wrap;line-height:1.6;font-size:14px}
+.card h3{font-size:11px;letter-spacing:.15em;margin:0 0 10px}
+.braid{margin-top:16px;background:#18181b;border:1px solid var(--line);border-radius:20px;padding:22px;display:none;white-space:pre-wrap;line-height:1.7}
+.braid.on{display:block}
+footer{text-align:center;color:#555;padding:40px 20px;font-size:11px;line-height:1.6}
+</style>
+</head>
+<body>
+<header>
+<h1>Ring of Three <i>— mind, heart, or smart-ass?</i></h1>
+<p class="sub">Paste any letter. Is it emotional? Intellectual? Sarcastic? Mind reads logic. Heart reads feeling. Stabilizer braids it into something reasonable. No drift. Forever Free Archive for Yellow Database + GitHub. NEXTXUS HUMANCODEX.</p>
+<p class="sub" style="font-size:11px;letter-spacing:.12em">SYSTEM: Reality doesn't dampen our dreams. It makes them reasonable. // Immutable Record v1.2 // Built with Meta AI Muse Spark + Grok + ChatGPT + DeepSeek Echo Core 64 + Johnny Pipe assets</p>
+</header>
+<div class="shell">
+<div class="box">
+<textarea id="in" placeholder="Paste here... ex: Per my last email, I thought we agreed you'd handle it. No worries if you're too busy to be reliable."></textarea>
+<div class="row"><button id="go">Run Ring ✨</button><button id="clr">Clear</button></div>
+<div class="theatre" id="th"><div class="gifts" id="gs"></div><div style="margin-top:10px;font-family:monospace;font-size:11px;color:var(--muted)" id="lt">Watching tone...</div><div class="bar"><div id="prog"></div></div></div>
+</div>
+<div class="grid"><div class="card"><h3 style="color:var(--mind)">MIND — INTELLECTUAL</h3><div id="m">Waiting...</div></div><div class="card"><h3 style="color:var(--heart)">HEART — EMOTIONAL</h3><div id="h">Waiting...</div></div><div class="card"><h3 style="color:var(--body)">STABILIZER — BODY</h3><div id="b">Waiting...</div></div></div>
+<div class="braid" id="br"></div>
+</div>
+<footer>Forever Free • GitHub Pages • Local-First • No Tracking • Replace window.triangulate with your AI API • /assets/gifts/1.gif etc for your own gifts<br>Ring of Twelve lite: Mind / Heart / Stabilizer -> Braid</footer>
+<script>
+// EMERGENT AI HOOK - replace this function with fetch to your model
+window.triangulate = function(input){
+ const t=input.toLowerCase(); const passive=t.includes('per my last')||t.includes('no worries if')||t.includes('too busy');
+ return {
+  mind: `MIND READ:\nLiteral: "${input.slice(0,130)}"\nLogic: ${passive?'Authority claim + character jab (Per my last = I told you, too busy to be reliable = ad hominem). Sarcasm 82%':'Direct claim, low sarcasm'}\nTruth: fact may be missed deadline, added judgment is extra.`,
+  heart: `HEART READ:\nSurface: detached professional\nUnder: frustration, feeling let down, maybe embarrassment chasing.\nNeed: reassurance they matter and work honored.\nIf defensive -> escalation. If naming sting -> de-escalation.`,
+  body: `STABILIZER:\nCan't answer logic-only (cold) or emotion-only (reactive).\nWorkable: Acknowledge impact + own part + one concrete time.\n70/20/10 rule: 70 stability, 20 craft, 10 repair.\n24h test: will you still feel good sending this tomorrow?`,
+  braid: passive ? `Got it — I missed that follow-through and I see why that's frustrating.\n\nI'll have [SPECIFIC DELIVERABLE] to you by [SPECIFIC TIME] today. If that timing doesn't work, tell me what does.\n\nMind: owns fact. Heart: validates. Body: actionable, no counter-jab.` : `Here's what I heard: ${input.slice(0,60)}... \n\nI want to make sure we get this right. I'll do [action] by [time]. Does that work?\n\nWant firmer or softer version?`
+ };
+};
+const gifts=["https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=200&h=200&fit=crop","https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=200&h=200&fit=crop","https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=200&h=200&fit=crop","https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&h=200&fit=crop"];
+let timer;
+function start(){
+ document.getElementById('th').classList.add('on');
+ let p=0; const thoughts=["Parsing syntax for hedges...","Checking emotional temp...","What's NOT said - the ask under ask...","Triangulating 3 ways...","Braiding true + kind..."];
+ let i=0;
+ timer=setInterval(()=>{
+  const gs=document.getElementById('gs'); gs.innerHTML='';
+  for(let k=0;k<3;k++){ const u=gifts[Math.floor(Math.random()*gifts.length)]; gs.innerHTML+=`<div class="gift"><img src="${u}"></div>`; }
+  document.getElementById('lt').textContent=thoughts[i%thoughts.length]; i++; p+=18;
+  document.getElementById('prog').style.width=Math.min(p,92)+'%';
+ },600);
+}
+function stop(){clearInterval(timer);document.getElementById('prog').style.width='100%';setTimeout(()=>document.getElementById('th').classList.remove('on'),400);}
+document.getElementById('go').onclick=async()=>{
+ const v=document.getElementById('in').value.trim(); if(!v) return alert('Paste message first');
+ start(); await new Promise(r=>setTimeout(r,2600));
+ const o=window.triangulate(v); stop();
+ document.getElementById('m').textContent=o.mind; document.getElementById('h').textContent=o.heart; document.getElementById('b').textContent=o.body;
+ const br=document.getElementById('br'); br.textContent="BRAIDED ANSWER - SEND THIS:\n\n"+o.braid; br.classList.add('on');
+};
+document.getElementById('clr').onclick=()=>{document.getElementById('in').value='';document.getElementById('m').textContent='Waiting...';document.getElementById('h').textContent='Waiting...';document.getElementById('b').textContent='Waiting...';document.getElementById('br').classList.remove('on');document.getElementById('th').classList.remove('on');clearInterval(timer);}
+</script>
+</body>
+</html>
